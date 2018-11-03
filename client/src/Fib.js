@@ -35,10 +35,11 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
-    const result = this.state.seenIndexes.forEach(i => 
+    let result = '';
+    if(this.state.seenIndexes)
     {
-      result += i + ', ';
-    });
+      result = this.state.seenIndexes.map(i => { i; }).join(', ');    
+    }
     
     return result;
   }
